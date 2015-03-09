@@ -1,0 +1,72 @@
+<%= form_for @detail, :url => details_path, :html => { :multipart => true }  do |f| %>
+  <% if @detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
+
+      <ul>
+      <% @detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="modal-body">
+ <ul class="errors"></ul>
+
+
+  <div class="control-group">
+  <div class="field">
+    <%= f.label :name %><br>
+    <div class="controls">
+   
+     <input name="detail[name]" type="text">
+  </div>
+  </div>
+  </div>
+  <div class="control-group">
+
+  <div class="field">
+    <%= f.label :sex %><br>
+     <div class="controls">
+   
+     <input name="detail[sex]" type="text">
+  </div>
+  </div>
+  </div>
+  
+  <div class="control-group">
+  <div class="field">
+    <%= f.label :college %><br>
+     <div class="controls">
+    
+     <input name="detail[college]" type="text">
+  </div>
+  </div>
+  </div>
+  <div class="control-group">
+  <div class="field">
+    <%= f.label :preexam %><br>
+     <div class="controls">
+    
+     <input name="detail[preexam]" type="text">
+  </div>
+  </div>
+  </div>
+  <div class="control-group">
+  <div class="field">
+    <%= f.label :image %><br>
+     <div class="controls">
+    
+    <%= f.file_field :image %>
+  
+
+  </div>
+  </div>
+  </div>
+  <div class="modal-footer">
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+  </div>
+</div>
+<% end %>

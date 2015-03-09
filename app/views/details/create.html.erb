@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @detail.name %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @detail.sex %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @detail.college %>
+</p>
+
+<p>
+  <strong>Preexam:</strong>
+  <%= @detail.preexam %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @detail.image.url(:medium) %>
+</p>
+

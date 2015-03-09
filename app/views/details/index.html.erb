@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Details</h1>
+<div class="well">
+  <button type="button" class="btn btn-primary" id="new_detail_button">new</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>College</th>
+      <th>Preexam</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+
+        <td><%= detail.name %></td>
+        <td><%= detail.sex %></td>
+        <td><%= detail.college %></td>
+        <td><%= detail.preexam %></td>
+        <td><%= detail.image %></td>
+        <td><%= link_to 'Show', detail %></td>
+        <td>
+        <button type="button" class="btn btn-primary edit_detail_button" data-details="<%= detail.id %>">Edit</button>
+        <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<div class="panel panel-default" id="new_details_panel">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    
+  </div>
+</div>
+
+<div class="panel panel-default" id="show_details_panel">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    
+  </div>
+</div>
